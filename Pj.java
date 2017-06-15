@@ -16,7 +16,7 @@ public class Pj extends Rectangle
         setWidth(25);
         setHeight(25);
         setTranslateX(225);
-        setTranslateY(910);
+        setTranslateY(800);
         setFill(Color.RED);  
         velocidadX = 1;
         limiteDesplazamientoX = limiteEnX;

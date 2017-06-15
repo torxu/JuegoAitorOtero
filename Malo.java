@@ -13,10 +13,10 @@ public class Malo extends Circle
         super();
         setFill(Color.BLUE);
         setRadius(RADIO);
-        Random aleatorio = new Random();        
+        Random aleatorio = new Random();
         velocidadY = aleatorio.nextInt(velocidadY + 7);
-        while(velocidadY == 0){
-            velocidadY = 10;
+        while(velocidadY < 4){
+            velocidadY = velocidadY + 3;
         }
         int posXmalo = aleatorio.nextInt(anchoEscena - DIAMENTRO);
         int posYmalo = aleatorio.nextInt(altoEscena/4);

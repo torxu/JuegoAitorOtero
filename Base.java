@@ -18,7 +18,7 @@ public class Base extends Application
 {
     public final static int ALTO_VENTANA = 1000;
     public final static int ANCHO_VENTANA = 500;
-    public final static int MALOS = 20;
+    public final static int MALOS = 15;
     private ArrayList<Malo> malos;
 
     public static void main(String[] args)
@@ -78,13 +78,13 @@ public class Base extends Application
                             contenedor.getChildren().add(perder);
                             timeline.stop();
                         }
-                       
+                       int ganar = 0;
                         for(int b = 0; b < malos.size(); b++){
-                            int ganar = 0;
-                            if(malos.get(a).getBoundsInParent().getMaxY() == personaje.getBoundsInParent().getMaxX()){                           
+                            
+                            if(malos.get(b).getBoundsInParent().getMaxY() > 900){                           
                                 ganar++;
                             }         
-                            if(ganar == 19){
+                            if(ganar == MALOS){
                                 Label ganar2 = new Label("Has ganado!!");
                                 Label ganar1 = new Label("pero no te creas importante");
                                 ganar2.setTranslateX(200);
@@ -93,8 +93,8 @@ public class Base extends Application
                                 ganar2.setScaleX(1.5);
                                 ganar2.setScaleY(1.5);
                                 contenedor.getChildren().add(ganar2);
-                                ganar1.setTranslateX(180);
-                                ganar1.setTranslateY(escena.getHeight() / 2 + 10);
+                                ganar1.setTranslateX(170);
+                                ganar1.setTranslateY(escena.getHeight() / 2 + 15);
                                 ganar1.setTextFill(Color.WHITE);
                                 ganar1.setScaleX(1.5);
                                 ganar1.setScaleY(1.5);
